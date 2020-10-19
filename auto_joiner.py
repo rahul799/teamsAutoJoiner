@@ -15,7 +15,10 @@ from webdriver_manager.chrome import ChromeDriverManager
 from webdriver_manager.utils import ChromeType
 from webdriver_manager.microsoft import EdgeChromiumDriverManager
 from msedge.selenium_tools import Edge, EdgeOptions
+from pyvirtualdisplay import Display
 
+display = Display(visible=0, size=(1366, 768))
+display.start()
 browser: webdriver.Chrome = None
 config = None
 meetings = []
@@ -637,6 +640,7 @@ if __name__ == "__main__":
     finally:
         if browser is not None:
             browser.quit()
+            display.stop()
 
         if hangup_thread is not None:
             hangup_thread.cancel()
