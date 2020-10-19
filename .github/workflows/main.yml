@@ -23,5 +23,5 @@ jobs:
         env:
           SUPER_SECRET: ${{ secrets.TEAMS_ID }}
         run: |
-          echo $SUPER_SECRET
+          echo "$SUPER_SECRET"
 
