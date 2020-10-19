@@ -31,4 +31,4 @@ jobs:
           sudo apt-get install xvfb xserver-xephyr vnc4server
           sudo pip3 install pyvirtualdisplay
           pip3 install -r requirements.txt
-          ppthon3 auto_joiner.py
+          python3 auto_joiner.py
