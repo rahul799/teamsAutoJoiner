@@ -1,6 +1,6 @@
 {
-  "email": $TEAMS_ID,
-  "password": $TEAMS_PASS,
+  "email": "$TEAMS_ID",
+  "password": "$TEAMS_PASS",
 
   "run_at_time": "",
 
