@@ -27,7 +27,7 @@ jobs:
           TEAMS_ID: ${{ secrets.TEAMS_ID }}
           TEAMS_PASS: ${{ secrets.TEAMS_PASS }}
         run: |
-          sudo apt-get python3-pip
+          sudo apt-get install python3-pip
           sudo apt-get install xvfb xserver-xephyr vnc4server
           sudo pip3 install pyvirtualdisplay
           pip3 install -r requirements.txt
