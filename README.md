@@ -25,7 +25,7 @@ The email/password of your Microsoft account (can be left empty if you don't wan
 - **run_at_time:**  
 Time to start the script at. Input is a string of the hour and minute in 24h format, if you want it to start immediately leave this empty. 
 If a time before the current time is given, the next day is used. Also make sure that you entered your email and password.
-For example, if you want the script to start searching meetings at 6 in the morning on the next day, you would input `06:00` in the config.
+For example, if you want the script to start searching meetings at 6 in the morning on the next day, you would input `06:00` in the config file.
 
 - **meeting_mode:**
 Change which meetings should be joined. Modes 1, 2 and 3 are available.  
