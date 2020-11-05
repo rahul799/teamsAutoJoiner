@@ -30,7 +30,7 @@ conversation_link = "https://teams.microsoft.com/_#/conversations/a"
 mode = 3
 uuid_regex = r"\b[0-9a-f]{8}\b-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-\b[0-9a-f]{12}\b"
 
-
+#class
 class Team:
     def __init__(self, name, t_id, channels=None):
         self.name = name
