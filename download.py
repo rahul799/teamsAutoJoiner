@@ -7,6 +7,7 @@ from Crypto.Util.Padding import pad
 from Crypto.Cipher import AES
 import requests
 import logging
+import csv
 
 logging.basicConfig(filename="download.log",
                     format='%(asctime)s %(levelname)-10s %(funcName)-20s %(message)s',
@@ -102,16 +103,16 @@ def download_m3u8_video(url, save_name, key, max_workers=10):
     logger.info(f"File [{save_name}] downloaded!")
 
 def main():
-    # Read csv file contenders.csv
-    csv = open("contenders_decoded.csv", "r")
-    for line in range(csv.length):
-        line = csv[line].strip()
-        # TODO This is wrong - use a proper csv parser
-        row = csv[line].split(",")
-        url = row[1]
-        file_name = row[0]
-        key = row[8]
-        download_m3u8_video(url, file_name.strip() + ".ts", key)
+    # Read csv file contenders.csv    
+    with open('contenders_decoded.csv', "r") as csvfile:
+        csv_file = csv.reader(csvfile)
+        for row in csv_file:
+            url = row[1]
+            file_name = row[0]
+            key = row[8]
+            download_m3u8_video(url, file_name.strip() + ".ts", key)
+
+main()
 
 # download_m3u8_video('https://d272f79eqy1rdf.cloudfront.net/6aca9ee8-5af3-4b5d-b490-710058f50f69/master.m3u8','test2.ts', '3c3384493b6a93197f2254248070f459')
 
