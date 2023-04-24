@@ -25,7 +25,7 @@ The email/password of your Microsoft account (can be left empty if you don't wan
 - **run_at_time:**  
 Time to start the script at. Input is a string of the hour and minute in 24h format, if you want it to start immediately leave this empty. 
 If a time before the current time is given, the next day is used. Also make sure that you entered your email and password.
-For example, if you want the script to start searching meetings at 6 in the morning on the next day, you would input `06:00` in the config.
+For example, if you want the script to start searching meetings at 6 in the morning on the next day, you would input `06:00` in the config file.
 
 - **meeting_mode:**
 Change which meetings should be joined. Modes 1, 2 and 3 are available.  
@@ -86,3 +86,4 @@ If you want to blacklist all the channels in a team, leave the square brackets e
  4. Run [auto_joiner.py](auto_joiner.py): `python auto_joiner.py`
  5. After starting, teams might be in Grid view, if this is the case change the view to list [(How to do)](https://support.microsoft.com/en-us/office/view-and-organize-your-teams-b9dd0d8c-243a-43a4-9501-ec8017fec32e)
 <img src="https://i.imgur.com/GODoJYf.png?2" width="300" height="245" />
+
